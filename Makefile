@@ -1,5 +1,4 @@
 YARN=yarn
-NPM=npm
 name=ikabot
 adapter=shell
 
@@ -10,7 +9,7 @@ install:
 	$(YARN) install
 
 start: .env
-	set -o allexport && source $< && $(NPM) run start -- --name $(name) --adapter $(adapter)
+	set -o allexport && source $< && $(YARN) run start --name $(name) --adapter $(adapter)
 
 start/slack:
 	$(MAKE) start adapter=slack
