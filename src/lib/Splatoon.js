@@ -15,7 +15,7 @@ class Splatoon {
     async gachi() {
         const res = await this.client.get('https://spla2.yuu26.com/schedule');
         const json = JSON.parse(res.body);
-        return json.result.league.map((s) => {
+        return json.result.gachi.map((s) => {
             return `${s.start} ~ ${s.end} - ${s.rule} (${s.maps.join(", ")})`;
         }).join("\n");
     }
@@ -23,7 +23,7 @@ class Splatoon {
     async nawabari() {
         const res = await this.client.get('https://spla2.yuu26.com/schedule');
         const json = JSON.parse(res.body);
-        return json.result.league.map((s) => {
+        return json.result.regular.map((s) => {
             return `${s.start} ~ ${s.end} - ${s.rule} (${s.maps.join(", ")})`;
         }).join("\n");
     }
