@@ -1,6 +1,7 @@
 YARN=yarn
 name=ikabot
 adapter=shell
+ENV=.env
 
 help:
 	cat Makefile
@@ -8,7 +9,7 @@ help:
 install:
 	$(YARN) install
 
-start: .env
+start: $(ENV)
 	set -o allexport && source $< && $(YARN) run start --name $(name) --adapter $(adapter)
 
 start/slack:
