@@ -1,0 +1,24 @@
+{
+    "name": "ikabot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "hubot"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/ara-ta3/ikabot.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ara-ta3/ikabot/issues"
+    },
+    "homepage": "https://github.com/ara-ta3/ikabot#readme",
+    "dependencies": {
+        "hubot": "^2.19.0",
+        "hubot-discord": "^2.1.0",
+        "hubot-slack": "^4.4.0"
+    }
+}
