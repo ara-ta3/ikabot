@@ -1,0 +1,12 @@
+[Unit]
+Description=ikabot for discord
+
+[Service]
+Environment="PATH=/root/.nodebrew/current/bin:$PATH"
+ExecStart=/usr/bin/make -C /opt/ikabot start/discord ENV=/opt/envs/ikabot.env.discord
+Restart=always
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
+Alias=ikabot.discord.service
