@@ -20,6 +20,7 @@
         "hubot": "^2.19.0",
         "hubot-discord": "^2.1.0",
         "hubot-help": "^0.2.2",
-        "hubot-slack": "^4.4.0"
+        "hubot-slack": "^4.4.0",
+        "moment": "^2.22.0"
     }
 }

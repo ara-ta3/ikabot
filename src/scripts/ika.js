@@ -11,10 +11,12 @@ const request = require('request');
 const Http = require('../lib/HttpClient');
 const Splatoon = require("../lib/Splatoon");
 
+const USER_AGENT = process.env.USER_AGENT;
+
 const splatoon = new Splatoon(
          new Http(
              request,
-             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+             USER_AGENT
          )
 );
 
