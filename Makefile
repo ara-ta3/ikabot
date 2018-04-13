@@ -3,8 +3,13 @@ name=ikabot
 adapter=shell
 ENV=.env
 
+.PHONY: test
+
 help:
 	cat Makefile
+
+test:
+	$(YARN) run test
 
 install:
 	$(YARN) install
