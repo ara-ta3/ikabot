@@ -15,7 +15,7 @@ install:
 	$(YARN) install
 
 start: $(ENV)
-	set -o allexport && source $< && $(YARN) run start --name $(name) --adapter $(adapter)
+	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
 
 start/slack:
 	$(MAKE) start adapter=slack
