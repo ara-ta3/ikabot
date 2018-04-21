@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+    ikabot:
+        image: # your ecr repository
+        logging:
+            driver: awslogs
+            options:
+                awslogs-group: ikabot
+                awslogs-region: ap-northeast-1
+                awslogs-stream-prefix: ikabot

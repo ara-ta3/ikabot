@@ -1,9 +1,0 @@
-version: "2"
-
-services:
-    ikabot:
-        image: node:8.11.1
-        volumes:
-            - .:/opt/ikabot
-        command: bash -c 'make install && make start/discord'
-        working_dir: /opt/ikabot
