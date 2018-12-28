@@ -7,6 +7,7 @@
 //   hubot ナワバリ - 直近のナワバリバトルのルールと時間とマップが出る
 //   hubot 現在 - 今の時間のナワバリ、ガチマッチ、リーグマッチのルールとマップが出る
 //   hubot 次 - 次の時間のナワバリ、ガチマッチ、リーグマッチのルールとマップが出る
+//   hubot 選んで ..... - 空白とかカンマ区切りの何かから選んでくれる
 //
 
 const request = require('request');
@@ -50,5 +51,10 @@ module.exports = (robot) => {
     robot.respond(/次$/i, async(msg) => {
         const message =  await splatoon.next();
         msg.send(message);
+    });
+    robot.respond(/選んで (.+)/i, res => {
+        const items = res.match[1].split(/[　・,、\s]+/);
+        const selected = res.random(items);
+        res.send(`マンメンミ！ ${selected}`);
     });
 };
