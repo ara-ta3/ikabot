@@ -1,2 +1,2 @@
-web: npm run start --name ikabot --adapter discord
+web: yarn run start --name ikabot --adapter discord
 
