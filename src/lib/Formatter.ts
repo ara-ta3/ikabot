@@ -1,11 +1,6 @@
 import * as moment from 'moment';
 
-export interface Schedule {
-    start: string;
-    end: string;
-    rule: string;
-    maps: Array<string>;
-}
+import { Schedule } from './Spla2APIClient'
 
 export function format(schedules: Array<Schedule>): string {
     const dates: Map<string, Array<string>> = new Map();

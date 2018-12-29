@@ -2,12 +2,12 @@ import * as moment from 'moment';
 import * as request from 'request';
 import * as NodeCache from 'node-cache';
 
-import { format, formatCurrent, Schedule } from './Formatter'
-type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>;
+import { format, formatCurrent } from '../lib/Formatter'
+import { Spla2APIClient, JsonResponseBody } from '../lib/Spla2APIClient'
 
 export function instance(userAgent: string): Splatoon {
     return new Splatoon(
-        new HttpClient(
+        new Spla2APIClient(
             request,
             userAgent
         )
@@ -16,23 +16,11 @@ export function instance(userAgent: string): Splatoon {
 
 class Splatoon {
     private CACHE_KEY: string = 'splatoon_schedule'
-    private client: HttpClient;
+    private client: Spla2APIClient;
     private cache: NodeCache;
-    constructor(client: HttpClient, cache: NodeCache = new NodeCache()) {
+    constructor(client: Spla2APIClient, cache: NodeCache = new NodeCache()) {
         this.client = client;
         this.cache = cache
-    }
-
-    async fetchSchedule(): Promise<JsonResponseBody> {
-        const cached = this.cache.get<JsonResponseBody>(this.CACHE_KEY);
-        if (cached !== undefined) {
-            return cached;
-        }
-        const body = await this.client.get('https://spla2.yuu26.com/schedule');
-        const res = JSON.parse(body);
-        const ttl = this.calculateTTL(moment());
-        this.cache.set(this.CACHE_KEY, res, ttl);
-        return res;
     }
 
     async league(): Promise<string> {
@@ -72,6 +60,16 @@ class Splatoon {
         ].join('\n');
     }
 
+    private async fetchSchedule(): Promise<JsonResponseBody> {
+        const cached = this.cache.get<JsonResponseBody>(this.CACHE_KEY);
+        if (cached !== undefined) {
+            return cached;
+        }
+        const res = await this.client.getSchedule();
+        const ttl = this.calculateTTL(moment());
+        this.cache.set(this.CACHE_KEY, res, ttl);
+        return res;
+    }
 
     private calculateTTL(currentTime: moment.Moment): number {
         const hour = currentTime.hour().valueOf();
@@ -80,44 +78,6 @@ class Splatoon {
         const minSec = (60 - min) * 60;
         const ttl = (hourSec + minSec)
         return ttl;
-    }
-}
-
-interface JsonResponseBody {
-    result: {
-        regular: Array<Schedule>;
-        gachi: Array<Schedule>;
-        league: Array<Schedule>;
-    }
-}
-
-class HttpClient {
-    private request: RequestAPI;
-    private userAgent: string;
-    constructor(request: RequestAPI, userAgent: string) {
-        this.request = request;
-        this.userAgent = userAgent;
-    }
-
-    get(url: string): Promise<string> {
-        return new Promise((resolve, reject) => {
-            this.request(
-                {
-                    url: url,
-                    method: 'GET',
-                    headers: {
-                        'User-Agent': this.userAgent
-                    }
-                },
-                (error, response, body) => {
-                    if (!error && response.statusCode === 200) {
-                        resolve(body);
-                    } else {
-                        reject(response);
-                    }
-                }
-            );
-        });
     }
 }
 
