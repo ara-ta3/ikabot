@@ -12,14 +12,14 @@
 
 import * as hubot from 'hubot'
 import * as request from 'request';
+import { HttpClient, Splatoon } from '../lib/Splatoon';
 
 type HubotRobot = hubot.Robot<any>;
 type HubotResponse = hubot.Response<HubotRobot>
-const Http = require('../lib/HttpClient');
-const Splatoon = require("../lib/Splatoon");
+
 const USER_AGENT = process.env.USER_AGENT;
 const splatoon = new Splatoon(
-    new Http(
+    new HttpClient(
         request,
         USER_AGENT
     )
