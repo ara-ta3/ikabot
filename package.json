@@ -18,14 +18,14 @@
     },
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
-        "hubot": "^2.19.0",
-        "hubot-discord": "^2.1.0",
-        "hubot-help": "^0.2.2",
-        "hubot-slack": "^4.4.0",
-        "moment": "^2.22.0"
+        "hubot": "3.1.1",
+        "hubot-discord": "2.1.0",
+        "hubot-help": "0.2.2",
+        "hubot-slack": "4.4.0",
+        "moment": "^2.23.0"
     },
     "devDependencies": {
-        "mocha": "^5.1.0",
-        "power-assert": "^1.5.0"
+        "mocha": "5.2.0",
+        "power-assert": "1.6.1"
     }
 }

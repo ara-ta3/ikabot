@@ -18,6 +18,9 @@ test:
 install:
 	$(YARN) install
 
+outdated:
+	$(YARN) outdated
+
 start: $(ENV)
 	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
 
