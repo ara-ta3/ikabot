@@ -4,45 +4,16 @@ import * as request from 'request';
 import { format, formatCurrent, Schedule } from './Formatter'
 type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>;
 
-interface JsonResponseBody {
-    result: {
-        regular: Array<Schedule>;
-        gachi: Array<Schedule>;
-        league: Array<Schedule>;
-    }
+export function instance(userAgent: string): Splatoon {
+    return new Splatoon(
+        new HttpClient(
+            request,
+            userAgent
+        )
+    );
 }
 
-export class HttpClient {
-    private request: RequestAPI;
-    private userAgent: string;
-    constructor(request: RequestAPI, userAgent: string) {
-        this.request = request;
-        this.userAgent = userAgent;
-    }
-
-    get(url: string): Promise<string> {
-        return new Promise((resolve, reject) => {
-            this.request(
-                {
-                    url: url,
-                    method: 'GET',
-                    headers: {
-                        'User-Agent': this.userAgent
-                    }
-                },
-                (error, response, body) => {
-                    if (!error && response.statusCode === 200) {
-                        resolve(body);
-                    } else {
-                        reject(response);
-                    }
-                }
-            );
-        });
-    }
-}
-
-export class Splatoon {
+class Splatoon {
     private client: HttpClient
     constructor(client: HttpClient) {
         this.client = client;
@@ -89,5 +60,43 @@ export class Splatoon {
             formatCurrent(json.result.league, next)
         ].join('\n');
     }
-
 }
+
+interface JsonResponseBody {
+    result: {
+        regular: Array<Schedule>;
+        gachi: Array<Schedule>;
+        league: Array<Schedule>;
+    }
+}
+
+class HttpClient {
+    private request: RequestAPI;
+    private userAgent: string;
+    constructor(request: RequestAPI, userAgent: string) {
+        this.request = request;
+        this.userAgent = userAgent;
+    }
+
+    get(url: string): Promise<string> {
+        return new Promise((resolve, reject) => {
+            this.request(
+                {
+                    url: url,
+                    method: 'GET',
+                    headers: {
+                        'User-Agent': this.userAgent
+                    }
+                },
+                (error, response, body) => {
+                    if (!error && response.statusCode === 200) {
+                        resolve(body);
+                    } else {
+                        reject(response);
+                    }
+                }
+            );
+        });
+    }
+}
+

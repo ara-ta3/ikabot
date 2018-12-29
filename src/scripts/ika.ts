@@ -11,19 +11,13 @@
 //
 
 import * as hubot from 'hubot'
-import * as request from 'request';
-import { HttpClient, Splatoon } from '../lib/Splatoon';
+import { instance as SplatoonServiceInstance } from '../lib/Splatoon';
 
 type HubotRobot = hubot.Robot<any>;
 type HubotResponse = hubot.Response<HubotRobot>
 
 const USER_AGENT = process.env.USER_AGENT;
-const splatoon = new Splatoon(
-    new HttpClient(
-        request,
-        USER_AGENT
-    )
-);
+const splatoon = SplatoonServiceInstance(USER_AGENT);
 
 module.exports = (robot: HubotRobot) => {
     robot.respond(/hello$/i, async (msg: HubotResponse) => {
