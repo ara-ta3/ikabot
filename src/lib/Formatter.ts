@@ -1,23 +1,10 @@
 import * as moment from 'moment';
-import { stringify } from 'querystring';
 
 export interface Schedule {
     start: string;
     end: string;
     rule: string;
     maps: Array<string>;
-}
-
-function isCurrentRule(schedule: Schedule, current: moment.Moment): boolean {
-    const start = moment(schedule.start);
-    const end = moment(schedule.end);
-    return current.isBetween(start, end);
-}
-
-function toMessageString(schedule: Schedule): string {
-    const start = moment(schedule.start).format('HH時');
-    const end = moment(schedule.end).format('HH時');
-    return `${start} ~ ${end} ${schedule.rule} (${schedule.maps.join(", ")})`;
 }
 
 export function format(schedules: Array<Schedule>): string {
@@ -45,5 +32,16 @@ export function formatCurrent(schedules: Array<Schedule>, currentTime: moment.Mo
         return toMessageString(currentRule.pop());
     }
     return 'あれ・・・今の時間帯のルールがないぞ・・・';
+}
 
+function isCurrentRule(schedule: Schedule, current: moment.Moment): boolean {
+    const start = moment(schedule.start);
+    const end = moment(schedule.end);
+    return current.isBetween(start, end);
+}
+
+function toMessageString(schedule: Schedule): string {
+    const start = moment(schedule.start).format('HH時');
+    const end = moment(schedule.end).format('HH時');
+    return `${start} ~ ${end} ${schedule.rule} (${schedule.maps.join(", ")})`;
 }
