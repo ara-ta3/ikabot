@@ -4,4 +4,4 @@ node_modules
 !.gitignore
 
 docker-compose.yml
-src/scripts/*.js
+src/**/*.js
