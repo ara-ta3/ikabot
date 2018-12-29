@@ -1,5 +1,6 @@
 import * as moment from 'moment';
 import * as request from 'request';
+import * as NodeCache from 'node-cache';
 
 import { format, formatCurrent, Schedule } from './Formatter'
 type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>;
@@ -14,14 +15,24 @@ export function instance(userAgent: string): Splatoon {
 }
 
 class Splatoon {
-    private client: HttpClient
-    constructor(client: HttpClient) {
+    private CACHE_KEY: string = 'splatoon_schedule'
+    private client: HttpClient;
+    private cache: NodeCache;
+    constructor(client: HttpClient, cache: NodeCache = new NodeCache()) {
         this.client = client;
+        this.cache = cache
     }
 
     async fetchSchedule(): Promise<JsonResponseBody> {
+        const cached = this.cache.get<JsonResponseBody>(this.CACHE_KEY);
+        if (cached !== undefined) {
+            return cached;
+        }
         const body = await this.client.get('https://spla2.yuu26.com/schedule');
-        return JSON.parse(body);;
+        const res = JSON.parse(body);
+        const ttl = this.calculateTTL(moment());
+        this.cache.set(this.CACHE_KEY, res, ttl);
+        return res;
     }
 
     async league(): Promise<string> {
@@ -59,6 +70,16 @@ class Splatoon {
             formatCurrent(json.result.gachi, next),
             formatCurrent(json.result.league, next)
         ].join('\n');
+    }
+
+
+    private calculateTTL(currentTime: moment.Moment): number {
+        const hour = currentTime.hour().valueOf();
+        const min = currentTime.minute().valueOf();
+        const hourSec = (hour % 2 === 1 ? 1 : 0) * 60 * 60;
+        const minSec = (60 - min) * 60;
+        const ttl = (hourSec + minSec)
+        return ttl;
     }
 }
 
