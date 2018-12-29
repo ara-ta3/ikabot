@@ -721,6 +721,11 @@ hubot-help@1.0.1:
   resolved "https://registry.yarnpkg.com/hubot-help/-/hubot-help-1.0.1.tgz#0a678e551d67c4317e222ff294b9583b8322fce7"
   integrity sha512-1gL7ywROwQG6Grom68Bhi8O7YHn/qEkg3tGgap+tFejZGxVnFyJ/LcStBScW/zUj4yf0GlDaExR/vsaTjzBRsA==
 
+hubot-heroku-keepalive@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/hubot-heroku-keepalive/-/hubot-heroku-keepalive-1.0.3.tgz#2950e28095ee4a6ace2b76f90e2a91ba91e6813c"
+  integrity sha1-KVDigJXuSmrOK3b5DiqRupHmgTw=
+
 hubot-slack@4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/hubot-slack/-/hubot-slack-4.6.0.tgz#c016cc1b6cf76a35d613acb98382d14bafdfd7ad"
