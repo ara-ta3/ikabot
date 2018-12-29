@@ -24,6 +24,9 @@ outdated:
 tsc:
 	$(YARN) run tsc
 
+clean:
+	rm -f src/**/*.js
+
 start: $(ENV) tsc
 	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
 

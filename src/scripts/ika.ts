@@ -11,7 +11,7 @@
 //
 
 import * as hubot from 'hubot'
-import { instance as SplatoonServiceInstance } from '../lib/Splatoon';
+import { instance as SplatoonServiceInstance } from '../services/Splatoon';
 
 type HubotRobot = hubot.Robot<any>;
 type HubotResponse = hubot.Response<HubotRobot>
