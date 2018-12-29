@@ -21,13 +21,16 @@ install:
 outdated:
 	$(YARN) outdated
 
-start: $(ENV)
+tsc:
+	$(YARN) run tsc
+
+start: $(ENV) tsc
 	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
 
-start/slack:
+start/slack: tsc
 	$(MAKE) start adapter=slack
 
-start/discord:
+start/discord: tsc
 	$(MAKE) start adapter=discord
 
 .env: env.sample
