@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "hubot",
-        "test": "mocha --recursive test -R spec"
+        "test": "mocha --recursive test -R spec",
+        "compile": "tsc --project ."
     },
     "repository": {
         "type": "git",
@@ -18,11 +19,16 @@
     },
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
+        "@types/hubot": "2.19.2",
+        "@types/node": "10.12.18",
+        "@types/request": "^2.48.1",
         "hubot": "3.1.1",
         "hubot-discord": "2.1.0",
         "hubot-help": "1.0.1",
         "hubot-slack": "4.6.0",
-        "moment": "^2.23.0"
+        "moment": "2.23.0",
+        "node-cache": "4.2.0",
+        "typescript": "^3.2.2"
     },
     "devDependencies": {
         "mocha": "5.2.0",
