@@ -1,14 +1,14 @@
 import * as request from 'request';
 type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>;
 
-const APIEndpoint = 'https://spla2.yuu26.com'
+const APIEndpoint = 'https://spla2.yuu26.com';
 
 export interface JsonResponseBody {
     result: {
         regular: Array<Schedule>;
         gachi: Array<Schedule>;
         league: Array<Schedule>;
-    }
+    };
 }
 
 export interface Schedule {
@@ -38,8 +38,8 @@ export class Spla2APIClient {
                     url: url,
                     method: 'GET',
                     headers: {
-                        'User-Agent': this.userAgent
-                    }
+                        'User-Agent': this.userAgent,
+                    },
                 },
                 (error, response, body) => {
                     if (!error && response.statusCode === 200) {
@@ -52,4 +52,3 @@ export class Spla2APIClient {
         });
     }
 }
-

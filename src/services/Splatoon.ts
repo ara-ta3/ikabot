@@ -2,25 +2,20 @@ import * as moment from 'moment';
 import * as request from 'request';
 import * as NodeCache from 'node-cache';
 
-import { format, formatCurrent } from '../lib/Formatter'
-import { Spla2APIClient, JsonResponseBody } from '../lib/Spla2APIClient'
+import { format, formatCurrent } from '../lib/Formatter';
+import { Spla2APIClient, JsonResponseBody } from '../lib/Spla2APIClient';
 
 export function instance(userAgent: string): Splatoon {
-    return new Splatoon(
-        new Spla2APIClient(
-            request,
-            userAgent
-        )
-    );
+    return new Splatoon(new Spla2APIClient(request, userAgent));
 }
 
 class Splatoon {
-    private CACHE_KEY: string = 'splatoon_schedule'
+    private CACHE_KEY: string = 'splatoon_schedule';
     private client: Spla2APIClient;
     private cache: NodeCache;
     constructor(client: Spla2APIClient, cache: NodeCache = new NodeCache()) {
         this.client = client;
-        this.cache = cache
+        this.cache = cache;
     }
 
     async league(): Promise<string> {
@@ -45,7 +40,7 @@ class Splatoon {
             '今のステージは、ここだ！',
             formatCurrent(json.result.regular, currentTime),
             formatCurrent(json.result.gachi, currentTime),
-            formatCurrent(json.result.league, currentTime)
+            formatCurrent(json.result.league, currentTime),
         ].join('\n');
     }
 
@@ -56,7 +51,7 @@ class Splatoon {
             '今のステージは、ここだ！',
             formatCurrent(json.result.regular, next),
             formatCurrent(json.result.gachi, next),
-            formatCurrent(json.result.league, next)
+            formatCurrent(json.result.league, next),
         ].join('\n');
     }
 
@@ -76,8 +71,7 @@ class Splatoon {
         const min = currentTime.minute().valueOf();
         const hourSec = (hour % 2 === 1 ? 1 : 0) * 60 * 60;
         const minSec = (60 - min) * 60;
-        const ttl = (hourSec + minSec)
+        const ttl = hourSec + minSec;
         return ttl;
     }
 }
-
