@@ -27,6 +27,9 @@ tsc:
 clean:
 	rm -f src/**/*.js
 
+prettier:
+	$(YARN) run prettier
+
 start: $(ENV) tsc
 	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
 
