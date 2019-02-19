@@ -2,8 +2,8 @@ import * as moment from 'moment';
 import * as request from 'request';
 import * as NodeCache from 'node-cache';
 
-import { format, formatCurrent } from '../lib/Formatter';
-import { Spla2APIClient, JsonResponseBody } from '../lib/Spla2APIClient';
+import { format, formatCurrent } from 'lib/Formatter';
+import { Spla2APIClient, JsonResponseBody } from 'lib/Spla2APIClient';
 
 export function instance(userAgent: string): Splatoon {
     return new Splatoon(new Spla2APIClient(request, userAgent));

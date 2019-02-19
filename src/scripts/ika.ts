@@ -10,11 +10,11 @@
 //   hubot 選んで ..... - 空白とかカンマ区切りの何かから選んでくれる
 //
 
-import * as hubot from 'hubot'
-import { instance as SplatoonServiceInstance } from '../services/Splatoon';
+import * as hubot from 'hubot';
+import { instance as SplatoonServiceInstance } from 'services/Splatoon';
 
 type HubotRobot = hubot.Robot<any>;
-type HubotResponse = hubot.Response<HubotRobot>
+type HubotResponse = hubot.Response<HubotRobot>;
 
 const USER_AGENT = process.env.USER_AGENT;
 const splatoon = SplatoonServiceInstance(USER_AGENT);

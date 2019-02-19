@@ -1,5 +1,14 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "lib/*": [
+                "src/lib/*"
+            ],
+            "services/*": [
+                "src/services/*"
+            ],
+        },
         "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": false,
