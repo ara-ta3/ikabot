@@ -1,6 +1,6 @@
 import * as moment from 'moment';
 
-import { Schedule } from 'lib/Spla2APIClient';
+import { Schedule } from '../lib/Spla2APIClient';
 
 export function format(schedules: Array<Schedule>): string {
     const dates: Map<string, Array<string>> = new Map();
