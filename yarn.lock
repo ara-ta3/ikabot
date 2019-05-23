@@ -37,10 +37,10 @@
   resolved "https://registry.yarnpkg.com/@types/hubot/-/hubot-2.19.2.tgz#3196b0dbe6173f73d42edc44052bf1a8ae9aede3"
   integrity sha512-sMilTaimyhhKRNaL5xBvrYOcnCwgcNiXG43lYO/P90DFIVbK/QlVCjUeP9evygIIbbdUrd6LTEWT4bsRaFXuRA==
 
-"@types/node-cache@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@types/node-cache/-/node-cache-4.1.1.tgz#c435974571cdb3b44fef91de95565fb6656cc3b6"
-  integrity sha512-dFZY8H8uaf4qtd+a18jS5VChiI1apGXh6N6SXdRf4SPfdLG/D+oNvsEM2Ic0ee+nFqJLAsRy4+R0qkvO45CIWA==
+"@types/node-cache@^4.1.3":
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/@types/node-cache/-/node-cache-4.1.3.tgz#524b8b13b787dec4fe982b9d77b251f7d59416f4"
+  integrity sha512-3hsqnv3H1zkOhjygJaJUYmgz5+FcPO3vejBX7cE9/cnuINOJYrzkfOnUCvpwGe9kMZANIHJA7J5pOdeyv52OEw==
   dependencies:
     "@types/node" "*"
 
