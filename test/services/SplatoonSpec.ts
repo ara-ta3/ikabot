@@ -1,13 +1,13 @@
 import * as assert from 'power-assert';
 import * as request from 'request';
 import { Splatoon } from '../../src/services/Splatoon';
-import { MockSplat2ApiClient } from '../mock';
-import { StatInkAPIClient } from '../../src/lib/StatInk';
+import { MockSplat2ApiClient, MockStatInkApiClient } from '../mock';
+import { StatInkAPIClientImpl } from '../../src/lib/StatInk';
 
 describe('Splatoon', () => {
     describe('gachi()', async () => {
         it('Succeeds in parsing', async () => {
-            const splatoon = new Splatoon(new MockSplat2ApiClient(), new StatInkAPIClient(request));
+            const splatoon = new Splatoon(new MockSplat2ApiClient(), new MockStatInkApiClient());
             const gachi = await splatoon.gachi();
             const expected = `2018/04/13
 19時 ~ 21時 ガチエリア (海女美術大学, タチウオパーキング)
