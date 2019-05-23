@@ -3,7 +3,11 @@ type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, reque
 
 const APIEndpoint = 'https://stat.ink/api/v2';
 
-export class StatInkAPIClient {
+export interface StatInkAPIClient {
+    getWeapons(): Promise<Array<Weapon>>;
+}
+
+export class StatInkAPIClientImpl implements StatInkAPIClient {
     private request: RequestAPI;
     constructor(request: RequestAPI) {
         this.request = request;

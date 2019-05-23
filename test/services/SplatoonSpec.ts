@@ -1,12 +1,15 @@
-"use strict"
-const assert = require("power-assert");
-const json = require("../mock");
-const format = require("../../src/lib/Formatter");
+import * as assert from 'power-assert';
+import * as request from 'request';
+import { Splatoon } from '../../src/services/Splatoon';
+import { MockSplat2ApiClient, MockStatInkApiClient } from '../mock';
+import { StatInkAPIClientImpl } from '../../src/lib/StatInk';
 
-describe("Formatter", () => {
-    it("日付ごとに分けられてること", () => {
-        const actual = format(json.result.gachi);
-        const expected = `2018/04/13
+describe('Splatoon', () => {
+    describe('gachi()', async () => {
+        it('Succeeds in parsing', async () => {
+            const splatoon = new Splatoon(new MockSplat2ApiClient(), new MockStatInkApiClient());
+            const gachi = await splatoon.gachi();
+            const expected = `2018/04/13
 19時 ~ 21時 ガチエリア (海女美術大学, タチウオパーキング)
 21時 ~ 23時 ガチホコバトル (ホッケふ頭, デボン海洋博物館)
 23時 ~ 01時 ガチアサリ (ザトウマーケット, アロワナモール)
@@ -19,7 +22,8 @@ describe("Formatter", () => {
 09時 ~ 11時 ガチエリア (モズク農園, バッテラストリート)
 11時 ~ 13時 ガチホコバトル (コンブトラック, アジフライスタジアム)
 13時 ~ 15時 ガチアサリ (タチウオパーキング, ハコフグ倉庫)
-15時 ~ 17時 ガチヤグラ (海女美術大学, アロワナモール)`
-        assert.equal(actual, expected);
+15時 ~ 17時 ガチヤグラ (海女美術大学, アロワナモール)`;
+            assert(expected === gachi);
+        });
     });
 });

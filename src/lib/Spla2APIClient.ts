@@ -18,7 +18,11 @@ export interface Schedule {
     maps: Array<string>;
 }
 
-export class Spla2APIClient {
+export interface Spla2APIClient {
+    getSchedule(): Promise<JsonResponseBody>;
+}
+
+export class Spla2APIClientImpl implements Spla2APIClient {
     private request: RequestAPI;
     private userAgent: string;
     constructor(request: RequestAPI, userAgent: string) {
