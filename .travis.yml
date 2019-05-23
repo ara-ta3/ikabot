@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+    - "10"
+    - "8"
+
+install:
+    - make install
+
+script:
+    - make tsc
+      # TODO make test
