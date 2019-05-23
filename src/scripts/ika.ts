@@ -17,6 +17,7 @@
 import * as hubot from 'hubot';
 import { instance as SplatoonServiceInstance } from '../services/Splatoon';
 import { Category, Type, JapaneseToEnglish } from '../lib/StatInk';
+import moment = require('moment');
 
 type HubotRobot = hubot.Robot<any>;
 type HubotResponse = hubot.Response<HubotRobot>;
@@ -45,7 +46,8 @@ module.exports = (robot: HubotRobot) => {
     });
 
     robot.respond(/現在$/i, async (msg: HubotResponse) => {
-        const message = await splatoon.current();
+        const current = moment();
+        const message = await splatoon.current(current);
         msg.send(message);
     });
 

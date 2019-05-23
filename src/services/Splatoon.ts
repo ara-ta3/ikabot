@@ -3,14 +3,17 @@ import * as request from 'request';
 import * as NodeCache from 'node-cache';
 
 import { format, formatCurrent } from '../lib/Formatter';
-import { Spla2APIClient, JsonResponseBody } from '../lib/Spla2APIClient';
-import { StatInkAPIClient, Category, Weapon, Type } from '../lib/StatInk';
+import { Spla2APIClient, Spla2APIClientImpl, JsonResponseBody } from '../lib/Spla2APIClient';
+import { StatInkAPIClientImpl, Category, Weapon, Type, StatInkAPIClient } from '../lib/StatInk';
 
 export function instance(userAgent: string): Splatoon {
-    return new Splatoon(new Spla2APIClient(request, userAgent), new StatInkAPIClient(request));
+    return new Splatoon(
+        new Spla2APIClientImpl(request, userAgent),
+        new StatInkAPIClientImpl(request)
+    );
 }
 
-class Splatoon {
+export class Splatoon {
     private CACHE_KEY: string = 'splatoon_schedule';
     private STATINK_WEAPON_CACHE_KEY: string = 'statink_weapons';
     private spla2APIClient: Spla2APIClient;
@@ -41,9 +44,8 @@ class Splatoon {
         return format(json.result.regular);
     }
 
-    async current(): Promise<string> {
+    async current(currentTime: moment.Moment): Promise<string> {
         const json = await this.fetchSchedule();
-        const currentTime = moment();
         return [
             '今のステージは、ここだ！',
             formatCurrent(json.result.regular, currentTime),
