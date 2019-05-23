@@ -32,7 +32,7 @@
         "hubot-help": "1.0.1",
         "hubot-heroku-keepalive": "^1.0.3",
         "hubot-slack": "4.6.0",
-        "moment": "2.23.0",
+        "moment": "2.24.0",
         "node-cache": "4.2.0",
         "typescript": "^3.2.2"
     },
