@@ -258,9 +258,10 @@ co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
 
-coffee-script@1.6.3:
+coffeescript@1.6.3:
   version "1.6.3"
-  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.6.3.tgz#6355d32cf1b04cdff6b484e5e711782b2f0c39be"
+  resolved "https://registry.yarnpkg.com/coffeescript/-/coffeescript-1.6.3.tgz#41749750c621a6553c7c03818a5384bb24c30541"
+  integrity sha1-QXSXUMYhplU8fAOBilOEuyTDBUE=
 
 colors@1.0.x:
   version "1.0.3"
@@ -735,15 +736,15 @@ hubot-slack@4.6.0:
     bluebird "^3.5.1"
     lodash "^4.17.10"
 
-hubot@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/hubot/-/hubot-3.1.1.tgz#c6e8ac10e3d7001043d064c52b6e946afd7ea749"
-  integrity sha512-r57C1CGZmUaADRom6CGi8aL0J3rPIV3fHYvVA+Zv7kPtsfZiwDcqF+x89QrKP5zidN9+0LVCbTnbzwXP8QDfUA==
+hubot@3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hubot/-/hubot-3.3.2.tgz#6ad13db19082cbe57ee3f9cc1c2c856d15cba223"
+  integrity sha512-+8h/s+t5GirjuDW5K1QjTGBGzOU8ksEi51HeLdFghYOWj40x6ndhAU3C6SRPk/7yHj6luVPuVi/Y8s0P+lqM9Q==
   dependencies:
     async ">=0.1.0 <1.0.0"
     chalk "^1.0.0"
     cline "^0.8.2"
-    coffee-script "1.6.3"
+    coffeescript "1.6.3"
     connect-multiparty "^2.1.1"
     express "^4.16.3"
     log "1.4.0"
