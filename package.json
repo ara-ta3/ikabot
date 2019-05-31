@@ -37,7 +37,7 @@
         "typescript": "^3.2.2"
     },
     "devDependencies": {
-        "@types/mocha": "^5.2.6",
+        "@types/mocha": "^5.2.7",
         "@types/power-assert": "^1.5.0",
         "espower-typescript": "^9.0.2",
         "mocha": "5.2.0",
