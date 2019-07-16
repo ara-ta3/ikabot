@@ -1,12 +1,12 @@
 language: node_js
-
 node_js:
-    - "10"
-    - "8"
-
+    - '10'
+    - '8'
 install:
     - make install
-
 script:
     - make tsc
     - make test
+notifications:
+    slack:
+        secure: fIOmkFcH7cRf36QTUHs1z4IQ8I+05E2QWkqq8cGJjpwdRzvPrd8tkpjbN0q0CDIszjcCTWKkCwiKljLP5DWF0yJHtCpLjtEwz6NbXgpuuSlaLHGr8ambceoNyFdvq2Uo+3onLZgienlIlogpfj8UCjCeB6JjAeqCuGWFS/57xRalxrtRy1qJb4M4EOhVej2OLthY34M+pJG3ZPQ/4wyRo+JTvgB7DdMGQao3zCtCyQsRYiVCH/uWuFDErcnSO8aAKfeo+eQrALXnE6x2w/421iUFkj8wnrcGLtYBbZcMjbuGrAHCAy/21poVC5mu1eeeOMRjS45EzLtxU/ZIqKSwdepMGbTBcpgOxeoxqRo+aCn3aZ9vNnlaHxSNEIIeAmrddzCVTFpYxMgiws2nkWklpfnQnyaYRp9qCpVtRrDGV8ERTC/3y3sO/TvRl7hb8bIp3wx77HId3aA0Qt33GS3ue6HIBlYKOSOvkMv3K1MYAxnJAE4g7k0lI7AMupaGTl5uEvoGxsc1LQfdVWAMiZzfwXeTirHZebRcFv/CZgcP5gMl/IIEUMuIawiNHzo05e3wAbCeSldtbHIHmzrOuf5kN4c/Vzg3toeW+buBj3kIMjI6v8pjtEVwoF1rUr4YOEswTMbcgmvHeECfudRJBnDeKtXppnTnQ+Pc/w8/xepwHko=
