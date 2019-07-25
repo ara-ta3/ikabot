@@ -33,7 +33,7 @@
         "hubot-heroku-keepalive": "^1.0.3",
         "hubot-slack": "4.7.1",
         "moment": "2.23.0",
-        "node-cache": "4.2.0",
+        "node-cache": "4.2.1",
         "typescript": "^3.5.3"
     },
     "devDependencies": {
