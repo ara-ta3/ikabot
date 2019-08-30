@@ -24,7 +24,7 @@
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
         "@types/hubot": "2.19.5",
-        "@types/node": "12.7.2",
+        "@types/node": "12.7.3",
         "@types/node-cache": "^4.1.1",
         "@types/request": "^2.48.2",
         "hubot": "3.1.1",
