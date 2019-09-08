@@ -27,6 +27,7 @@
         "@types/node": "12.7.1",
         "@types/node-cache": "^4.1.1",
         "@types/request": "^2.48.2",
+        "discord.js": "^11.5.1",
         "hubot": "3.1.1",
         "hubot-discord": "2.1.0",
         "hubot-help": "1.0.1",
