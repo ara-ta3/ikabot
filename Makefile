@@ -32,15 +32,9 @@ prettier:
 	$(YARN) run prettier
 
 start: $(ENV) tsc
-	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter $(adapter)
+	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter discord
 
-start/slack: tsc
-	$(MAKE) start adapter=slack
-
-start/discord: tsc
-	$(MAKE) start adapter=discord
-
-start/discord2: $(ENV) tsc
+start2: $(ENV) tsc
 	set -o allexport && . ./$< && $(NODE) src/Run.js
 
 .env: env.sample
