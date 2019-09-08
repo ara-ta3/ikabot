@@ -6,7 +6,14 @@ function main(): void {
     const userAgent = process.env.USER_AGENT;
     const port = parseInt(process.env.PORT);
     const keepAliveUrl = process.env.HEROKU_KEEP_ALIVE_URL;
-    herokuKeepAliveInit(keepAliveUrl, isNaN(port) ? 8080 : port).catch((e) => {
+    const sleepHour = parseInt(process.env.HEROKU_KEEP_SLEEP_HOUR);
+    const wakeUpHour = parseInt(process.env.HEROKU_KEEP_WAKEUP_HOUR);
+    herokuKeepAliveInit(
+        keepAliveUrl,
+        isNaN(port) ? 8080 : port,
+        isNaN(sleepHour) ? 4 : sleepHour,
+        isNaN(wakeUpHour) ? 12 : wakeUpHour
+    ).catch((e) => {
         console.log('Keep Alive Error');
         console.log(e);
     });

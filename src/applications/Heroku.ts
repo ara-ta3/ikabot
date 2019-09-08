@@ -2,7 +2,12 @@ import * as http from 'http';
 import * as request from 'request';
 import moment = require('moment');
 
-export async function init(keepAliveUrl: string, port: number): Promise<void> {
+export async function init(
+    keepAliveUrl: string,
+    port: number,
+    sleepHour: number,
+    wakeUpHour: number
+): Promise<void> {
     const server = http.createServer((req, res) => {
         console.log(`Accessed. ${req.url}`);
         res.writeHead(200, {
@@ -12,16 +17,19 @@ export async function init(keepAliveUrl: string, port: number): Promise<void> {
     });
 
     server.listen(port);
-    const keepAlive = new KeepAlive(keepAliveUrl, port);
+    const keepAlive = new KeepAlive(keepAliveUrl, sleepHour, wakeUpHour);
     return await keepAlive.run();
 }
 
+/**
+ * https://devcenter.heroku.com/articles/free-dyno-hours
+ */
 class KeepAlive {
     private keepAliveUrl: string;
-    private port: number;
-    constructor(keepAliveUrl: string, port: number) {
+    private sleepHour: number;
+    private wakeUpHour: number;
+    constructor(keepAliveUrl: string, sleepHour: number, wakeUpHour: number) {
         this.keepAliveUrl = keepAliveUrl;
-        this.port = port;
     }
 
     async run(): Promise<void> {
@@ -33,8 +41,17 @@ class KeepAlive {
         }
     }
 
+    // TODO add test
     shouldRun(moment: moment.Moment): boolean {
-        return true;
+        const currentHour = moment.hour();
+        if (this.wakeUpHour <= currentHour) {
+            // should be 'if current time is 30 minutes before or not'
+            if (Math.abs(this.sleepHour - currentHour) < 2) {
+                return false;
+            }
+            return true;
+        }
+        return false;
     }
 
     wait(d: moment.Duration): Promise<void> {
