@@ -2,7 +2,7 @@ import { Client, Message } from 'discord.js';
 import { instance as SplatoonServiceInstance } from '../services/Splatoon';
 import { Bot } from './Bot';
 
-export function init(token: string, userAgent: string): void {
+export async function init(token: string, userAgent: string): Promise<string> {
     const client = new Client();
     const splatoon = SplatoonServiceInstance(userAgent);
 
@@ -29,5 +29,5 @@ export function init(token: string, userAgent: string): void {
         });
     });
 
-    client.login(token);
+    return await client.login(token);
 }
