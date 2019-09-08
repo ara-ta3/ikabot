@@ -6,6 +6,7 @@ ECS=ecs-cli
 DOCKER_COMPOSE=docker-compose
 HEROKU=heroku
 heroku_app_name=splatoon-ika-bot
+NODE=node
 
 .PHONY: test
 
@@ -38,6 +39,9 @@ start/slack: tsc
 
 start/discord: tsc
 	$(MAKE) start adapter=discord
+
+start/discord2: $(ENV) tsc
+	set -o allexport && . ./$< && $(NODE) src/Run.js
 
 .env: env.sample
 	cp -f $< $@
