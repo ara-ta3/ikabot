@@ -1,2 +1,2 @@
-web: yarn tsc && yarn run start --name ikabot --adapter $HUBOT_ADAPTER
+web: yarn tsc && node src/Run.js
 
