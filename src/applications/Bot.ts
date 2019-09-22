@@ -126,14 +126,14 @@ export class Bot {
                 `${this.name} プラベブキ - アルファ・ブラボー用の武器を全武器から選んでくれる`,
             ],
             [
-                /擬似確$/,
+                /(疑|擬)似確*$/,
                 async (messageSend) => {
                     const ps = Pseudo;
                     const ms = ps.map((p) => `${p.weaponName}\t${p.gearPoint}\t${p.damage}`);
                     const m = [`ブキ\tギア数\tダメージ`].concat(ms).join('\n');
                     messageSend(m);
                 },
-                `${this.name} 擬似確 - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）\nhttps://splatool.net/mainup.html のページを元に追加しています`,
+                `${this.name} (擬似確|疑似確|擬似|疑似) - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）\nhttps://splatool.net/mainup.html のページを元に追加しています`,
             ],
         ];
         reactions.push([
