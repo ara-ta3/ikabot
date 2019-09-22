@@ -1,5 +1,5 @@
 import { Client, Message } from 'discord.js';
-import { instance as SplatoonServiceInstance, Splatoon } from '../services/Splatoon';
+import { Splatoon } from '../services/Splatoon';
 import { Bot } from './Bot';
 
 export async function init(token: string, splatoon: Splatoon): Promise<string> {
