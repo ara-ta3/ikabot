@@ -2,7 +2,6 @@ node_modules
 .*
 !.git
 !.gitignore
-!.travis.yml
 !.circleci
 
 docker-compose.yml
