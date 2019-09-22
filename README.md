@@ -1,4 +1,4 @@
 ikabot
 ---
 
-[![Build Status](https://travis-ci.com/ara-ta3/ikabot.svg?branch=master)](https://travis-ci.com/ara-ta3/ikabot)
+[![CircleCI](https://circleci.com/gh/ara-ta3/ikabot.svg?style=svg)](https://circleci.com/gh/ara-ta3/ikabot)
