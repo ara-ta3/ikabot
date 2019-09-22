@@ -139,8 +139,8 @@ const BamboozlerPseudo: Array<Pseudo> = [
 
 export const Pseudo: Array<Pseudo> = []
     .concat(PrimeShooterPseudo)
-    .concat(H3NozzlenosePseudo)
     .concat(SplatDualiesPseudo)
-    .concat(L3NozzlenosePseudo)
     .concat(DualSquelcherPseudo)
+    .concat(L3NozzlenosePseudo)
+    .concat(H3NozzlenosePseudo)
     .concat(BamboozlerPseudo);

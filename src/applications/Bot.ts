@@ -129,12 +129,11 @@ export class Bot {
                 /擬似確$/,
                 async (messageSend) => {
                     const ps = Pseudo;
-                    const m = ps
-                        .map((p) => `${p.weaponName} - ギア: ${p.gearPoint} ダメージ: ${p.damage}`)
-                        .join('\n');
+                    const ms = ps.map((p) => `${p.weaponName}\t${p.gearPoint}\t${p.damage}`);
+                    const m = [`ブキ\tギア数\tダメージ`].concat(ms).join('\n');
                     messageSend(m);
                 },
-                `${this.name} 擬似確 - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）`,
+                `${this.name} 擬似確 - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）\nhttps://splatool.net/mainup.html のページを元に追加しています`,
             ],
         ];
         reactions.push([
