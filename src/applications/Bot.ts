@@ -1,7 +1,7 @@
 import { Splatoon } from '../services/Splatoon';
 import moment = require('moment');
-import { JapaneseToEnglish, Category, Type } from '../lib/StatInk';
 import { Pseudo } from '../domains/Pseudo';
+import { JapaneseToEnglish, Category, Type } from '../domains/Weapon';
 
 export class Bot {
     private name: string;
