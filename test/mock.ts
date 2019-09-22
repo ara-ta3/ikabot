@@ -1,6 +1,7 @@
 import { Spla2APIClient, JsonResponseBody } from '../src/lib/Spla2APIClient';
 import { MockSplat2Reponse } from './Contract';
-import { StatInkAPIClient, Weapon } from '../src/lib/StatInk';
+import { StatInkAPIClient } from '../src/lib/StatInk';
+import { Weapon } from '../src/domains/Weapon';
 
 export class MockSplat2ApiClient implements Spla2APIClient {
     getSchedule(): Promise<JsonResponseBody> {

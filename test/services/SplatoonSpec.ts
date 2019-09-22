@@ -1,8 +1,6 @@
 import * as assert from 'power-assert';
-import * as request from 'request';
 import { Splatoon } from '../../src/services/Splatoon';
 import { MockSplat2ApiClient, MockStatInkApiClient } from '../mock';
-import { StatInkAPIClientImpl } from '../../src/lib/StatInk';
 
 describe('Splatoon', () => {
     describe('gachi()', async () => {
