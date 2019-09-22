@@ -23,14 +23,10 @@
     },
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
-        "@types/hubot": "2.19.5",
         "@types/node": "12.7.4",
         "@types/node-cache": "^4.1.1",
         "@types/request": "^2.48.3",
         "discord.js": "^11.5.1",
-        "hubot": "3.1.1",
-        "hubot-discord": "2.1.0",
-        "hubot-heroku-keepalive": "^1.0.3",
         "moment": "2.23.0",
         "node-cache": "4.2.1",
         "typescript": "^3.6.2"

@@ -1,12 +1,8 @@
 YARN=yarn
-name=ikabot
-adapter=shell
 ENV=.env
-ECS=ecs-cli
-DOCKER_COMPOSE=docker-compose
 HEROKU=heroku
-heroku_app_name=splatoon-ika-bot
 NODE=node
+heroku_app_name=splatoon-ika-bot
 
 .PHONY: test
 
@@ -32,16 +28,10 @@ prettier:
 	$(YARN) run prettier
 
 start: $(ENV) tsc
-	set -o allexport && . ./$< && $(YARN) run start --name $(name) --adapter discord
-
-start2: $(ENV) tsc
 	set -o allexport && . ./$< && $(NODE) src/Run.js
 
 .env: env.sample
 	cp -f $< $@
-
-docker/build:
-	docker build -t ikabot .
 
 deploy/heroku:
 	git push heroku master
