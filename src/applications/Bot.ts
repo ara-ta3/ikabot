@@ -1,6 +1,7 @@
 import { Splatoon } from '../services/Splatoon';
 import moment = require('moment');
 import { JapaneseToEnglish, Category, Type } from '../lib/StatInk';
+import { Pseudo } from '../domains/Pseudo';
 
 export class Bot {
     private name: string;
@@ -123,6 +124,17 @@ export class Bot {
                     messageSend(message);
                 },
                 `${this.name} プラベブキ - アルファ・ブラボー用の武器を全武器から選んでくれる`,
+            ],
+            [
+                /擬似確$/,
+                async (messageSend) => {
+                    const ps = Pseudo;
+                    const m = ps
+                        .map((p) => `${p.weaponName} - ギア: ${p.gearPoint} ダメージ: ${p.damage}`)
+                        .join('\n');
+                    messageSend(m);
+                },
+                `${this.name} 擬似確 - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）`,
             ],
         ];
         reactions.push([
