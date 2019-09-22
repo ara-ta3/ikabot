@@ -1,2 +1,2 @@
-web: yarn tsc && node src/Run.js
+worker: yarn tsc && node src/Run.js
 
