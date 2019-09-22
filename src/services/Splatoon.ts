@@ -4,7 +4,8 @@ import * as NodeCache from 'node-cache';
 
 import { format, formatCurrent } from '../lib/Formatter';
 import { Spla2APIClient, Spla2APIClientImpl, JsonResponseBody } from '../lib/Spla2APIClient';
-import { StatInkAPIClientImpl, Category, Weapon, Type, StatInkAPIClient } from '../lib/StatInk';
+import { StatInkAPIClientImpl, StatInkAPIClient } from '../lib/StatInk';
+import { Weapon, Category, Type } from '../domains/Weapon';
 
 export function instance(userAgent: string): Splatoon {
     return new Splatoon(
