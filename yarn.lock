@@ -1371,13 +1371,12 @@ next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-node-cache@4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-4.2.1.tgz#efd8474dee4edec4138cdded580f5516500f7334"
-  integrity sha512-BOb67bWg2dTyax5kdef5WfU3X8xu4wPg+zHzkvls0Q/QpYycIFRLEEIdAx9Wma43DxG6Qzn4illdZoYseKWa4A==
+node-cache@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.1.tgz#ae9f4e4c486de4731391470bf518d5228ea4877e"
+  integrity sha512-W+a/8TIkGThCdyDeKzDWqf3qUSHDc+Zo/a55AIfGWB5y7l2mMTtBbRya3nzyzB6FJap0vWIaa/4mnFVm6HGfew==
   dependencies:
     clone "2.x"
-    lodash "^4.17.15"
 
 node-environment-flags@1.0.5:
   version "1.0.5"
