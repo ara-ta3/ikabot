@@ -133,7 +133,7 @@ export class Bot {
                     const m = [`ブキ\tギア数\tダメージ`].concat(ms).join('\n');
                     messageSend(m);
                 },
-                `${this.name} (擬似確|疑似確|擬似|疑似) - 擬似確ブキのギア数とダメージを教えてくれる（ただし全部じゃない）\nhttps://splatool.net/mainup.html のページを元に追加しています`,
+                `${this.name} (擬似確|疑似確|擬似|疑似) - 擬似確ブキのギア数とダメージを教えてくれる\nhttps://splatool.net/mainup.html のページを元に追加しています`,
             ],
         ];
         reactions.push([

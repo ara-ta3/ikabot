@@ -114,6 +114,29 @@ const DualSquelcherPseudo: Array<Pseudo> = [
         damage: 33.3,
     },
 ];
+const TetraDualiesPseudo: Array<Pseudo> = [
+    {
+        weaponName: 'クアッドホッパー',
+        gearPoint: 2.8,
+        damage: 33.2,
+    },
+    {
+        weaponName: 'クアッドホッパー',
+        gearPoint: 3.5,
+        damage: 33.2,
+    },
+    {
+        weaponName: 'クアッドホッパー',
+        gearPoint: 2.9,
+        damage: 33.3,
+    },
+    {
+        weaponName: 'クアッドホッパー',
+        gearPoint: 3.6,
+        damage: 33.3,
+    },
+];
+
 const BamboozlerPseudo: Array<Pseudo> = [
     {
         weaponName: '竹',
@@ -137,10 +160,30 @@ const BamboozlerPseudo: Array<Pseudo> = [
     },
 ];
 
+const SplashOMaticPseudo: Array<Pseudo> = [
+    {
+        weaponName: 'シャープマーカー',
+        gearPoint: 1.7,
+        damage: 33.3,
+    },
+    {
+        weaponName: 'シャープマーカー',
+        gearPoint: 2.4,
+        damage: 33.3,
+    },
+    {
+        weaponName: 'シャープマーカー',
+        gearPoint: 3.1,
+        damage: 33.3,
+    },
+];
+
 export const Pseudo: Array<Pseudo> = []
+    .concat(SplashOMaticPseudo)
     .concat(PrimeShooterPseudo)
     .concat(SplatDualiesPseudo)
     .concat(DualSquelcherPseudo)
+    .concat(TetraDualiesPseudo)
     .concat(L3NozzlenosePseudo)
     .concat(H3NozzlenosePseudo)
     .concat(BamboozlerPseudo);
