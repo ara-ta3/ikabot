@@ -30,7 +30,7 @@
         "moment": "2.23.0",
         "node-cache": "5.0.1",
         "request": "^2.88.0",
-        "typescript": "^3.6.4"
+        "typescript": "^3.7.2"
     },
     "devDependencies": {
         "@types/mocha": "^5.2.7",
