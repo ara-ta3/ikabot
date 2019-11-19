@@ -113,12 +113,12 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.7.tgz#315d570ccb56c53452ff8638738df60726d5b6ea"
   integrity sha512-NYrtPht0wGzhwe9+/idPaBB+TqkY9AhTvOLMkThm0IoEfLaiVQZwBwyJ5puCkO3AUCWrmcoePjp2mbFocKy4SQ==
 
-"@types/node-cache@^4.1.1":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@types/node-cache/-/node-cache-4.1.3.tgz#524b8b13b787dec4fe982b9d77b251f7d59416f4"
-  integrity sha512-3hsqnv3H1zkOhjygJaJUYmgz5+FcPO3vejBX7cE9/cnuINOJYrzkfOnUCvpwGe9kMZANIHJA7J5pOdeyv52OEw==
+"@types/node-cache@^4.2.5":
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@types/node-cache/-/node-cache-4.2.5.tgz#dac6be8bf8f486db4eef66f52f7bb9e90b65d2c1"
+  integrity sha512-faK2Owokboz53g8ooq2dw3iDJ6/HMTCIa2RvMte5WMTiABy+wA558K+iuyRtlR67Un5q9gEKysSDtqZYbSa0Pg==
   dependencies:
-    "@types/node" "*"
+    node-cache "*"
 
 "@types/node@*", "@types/node@12.12.9", "@types/node@>=10", "@types/node@>=8.9.0":
   version "12.12.9"
@@ -1371,7 +1371,7 @@ next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-node-cache@5.0.2:
+node-cache@*, node-cache@5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/node-cache/-/node-cache-5.0.2.tgz#f295ce2329f215da726e54c508bc4c5e2e0b4de9"
   integrity sha512-wqJIYqBbOaYycAHNXgWx7fYJA5S3KcwpJqwuDuHWGKzzG8vIvj80eN47+/FTioUdE96AuiTHoAtsiTVOBLrM9A==
