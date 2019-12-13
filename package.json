@@ -28,7 +28,7 @@
         "@types/request": "^2.48.3",
         "discord.js": "^11.5.1",
         "moment": "2.23.0",
-        "node-cache": "5.0.2",
+        "node-cache": "5.1.0",
         "request": "^2.88.0",
         "typescript": "^3.7.3"
     },
