@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@slack/bolt@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-1.5.0.tgz#c731a9cdfc3436f620356a557a0d47f099d9c922"
-  integrity sha512-AyV2VUBFIRvOA8KWwGgd5LcAV0gIc/3VNevIatAygEZ2SkXMjqNk9nv3grvK5xOfx6/mL5PClNoGu6lcgEON4Q==
+"@slack/bolt@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-1.6.0.tgz#a2205c7bfc1e0f8005b39b1077b18b529b685e1b"
+  integrity sha512-BfXZMZDwNOIESmCIvnj7Srpx0IRiLuNtVDDBOso1YAdFCfuANABj/11+Q0/BegHYWZMM8K+iYqMCr7WNhJV8LQ==
   dependencies:
     "@slack/logger" ">=1.0.0 <3.0.0"
     "@slack/types" "^1.2.1"
