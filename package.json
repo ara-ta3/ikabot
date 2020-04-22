@@ -29,7 +29,7 @@
         "discord.js": "^11.5.1",
         "moment": "2.23.0",
         "node-cache": "5.1.0",
-        "request": "^2.88.0",
+        "request": "^2.88.2",
         "typescript": "^3.8.3"
     },
     "devDependencies": {
