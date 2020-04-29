@@ -22,22 +22,22 @@
     },
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
-        "@slack/bolt": "^1.4.0",
-        "@types/node": "12.12.17",
+        "@slack/bolt": "^1.7.0",
+        "@types/node": "13.13.4",
         "@types/node-cache": "^4.2.5",
-        "@types/request": "^2.48.3",
+        "@types/request": "^2.48.4",
         "discord.js": "^11.5.1",
         "moment": "2.23.0",
-        "node-cache": "5.0.2",
-        "request": "^2.88.0",
-        "typescript": "^3.7.3"
+        "node-cache": "5.1.0",
+        "request": "^2.88.2",
+        "typescript": "^3.8.3"
     },
     "devDependencies": {
-        "@types/mocha": "^5.2.7",
-        "@types/power-assert": "^1.5.0",
+        "@types/mocha": "^7.0.2",
+        "@types/power-assert": "^1.5.3",
         "espower-typescript": "^9.0.2",
-        "mocha": "6.2.2",
+        "mocha": "7.1.2",
         "power-assert": "1.6.1",
-        "prettier": "^1.19.1"
+        "prettier": "^2.0.5"
     }
 }
