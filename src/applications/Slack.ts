@@ -13,7 +13,7 @@ export async function init(
         signingSecret: signingSecret,
     });
 
-    app.error((e) => {
+    app.error(async (e) => {
         console.error(e);
     });
 
