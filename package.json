@@ -26,6 +26,7 @@
         "@types/node": "13.13.5",
         "@types/node-cache": "^4.2.5",
         "@types/request": "^2.48.4",
+        "@types/ws": "^7.2.4",
         "discord.js": "^12.2.0",
         "moment": "2.25.3",
         "node-cache": "5.1.0",
@@ -35,7 +36,6 @@
     "devDependencies": {
         "@types/mocha": "^7.0.2",
         "@types/power-assert": "^1.5.3",
-        "@types/ws": "^7.2.4",
         "espower-typescript": "^9.0.2",
         "mocha": "7.1.2",
         "power-assert": "1.6.1",
