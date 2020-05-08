@@ -15,6 +15,10 @@ export async function init(token: string, splatoon: Splatoon): Promise<string> {
         if (message.author.bot) {
             return;
         }
+
+        if (!isMentioned(client, message)) {
+            return;
+        }
         if (bot === null) {
             bot = new Bot(client.user.tag, splatoon);
         }
@@ -29,4 +33,9 @@ export async function init(token: string, splatoon: Splatoon): Promise<string> {
     });
 
     return await client.login(token);
+}
+
+function isMentioned(client: Client, message: Message): boolean {
+    const mentionedUserIds = Array.from(message.mentions.users.values()).map((x) => x.id);
+    return mentionedUserIds.includes(client.user.id);
 }

@@ -1,4 +1,4 @@
-import { App } from '@slack/bolt';
+import { App, directMention } from '@slack/bolt';
 import { Splatoon } from '../services/Splatoon';
 import { Bot } from './Bot';
 
@@ -20,7 +20,7 @@ export async function init(
     const bot: Bot = new Bot('ika', splatoon);
     bot.reactions().forEach((v) => {
         const [re, func, _] = v;
-        app.message(re, async ({ context, say }) => {
+        app.message(re, directMention(), async ({ context, say }) => {
             const matched = context.matched;
             func((m: string) => say(m), matched === null ? [] : matched);
         });
