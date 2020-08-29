@@ -37,7 +37,7 @@
         "@types/mocha": "^8.0.3",
         "@types/power-assert": "^1.5.3",
         "espower-typescript": "^9.0.2",
-        "mocha": "8.1.2",
+        "mocha": "8.1.3",
         "power-assert": "1.6.1",
         "prettier": "^2.1.1"
     }
