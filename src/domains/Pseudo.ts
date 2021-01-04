@@ -182,19 +182,19 @@ const HydraSplatling: Array<Pseudo> = [
     {
         weaponName: 'ハイドラント',
         gearPoint: 0.5,
-        damage: 33.3
+        damage: 33.3,
     },
     {
         weaponName: 'ハイドラント',
         gearPoint: 1.2,
-        damage: 33.3
-    }
+        damage: 33.3,
+    },
     {
         weaponName: 'ハイドラント',
         gearPoint: 1.1,
-        damage: 33.2
-    }
-]
+        damage: 33.2,
+    },
+];
 
 export const Pseudo: Array<Pseudo> = []
     .concat(SplashOMaticPseudo)
@@ -205,5 +205,4 @@ export const Pseudo: Array<Pseudo> = []
     .concat(L3NozzlenosePseudo)
     .concat(H3NozzlenosePseudo)
     .concat(BamboozlerPseudo)
-    .concat(HydraSplatling)
-    ;
+    .concat(HydraSplatling);
