@@ -16,10 +16,10 @@
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-"@slack/bolt@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-2.5.0.tgz#d6eb06d55b264990848aab47693fb4bcec2fed76"
-  integrity sha512-dOmUgU4Zw8ExNqFcCK2N9StQCfS/ByQULcA+A7VFRFK5eju548lrkCJy6zDGH6peKnUUO1W54c3TbJC0SObrww==
+"@slack/bolt@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-2.6.1.tgz#529ac58c8bd135b78ac175e50a9768ddaf425250"
+  integrity sha512-sFTlYEzijoKaiBwmdfcLAO/466mzsV2cIYBEUyw5kUvP31169rCT8wiysxed+Qu/c0R5Q8HQDSRWv/n5jRrrug==
   dependencies:
     "@slack/logger" "^2.0.0"
     "@slack/oauth" "^1.4.0"
@@ -28,7 +28,7 @@
     "@types/express" "^4.16.1"
     "@types/node" ">=10"
     "@types/promise.allsettled" "^1.0.3"
-    axios "^0.19.0"
+    axios "^0.21.1"
     express "^4.16.4"
     please-upgrade-node "^3.2.0"
     promise.allsettled "^1.0.2"
@@ -370,6 +370,13 @@ axios@^0.19.0:
   integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
   dependencies:
     follow-redirects "1.5.10"
+
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -1164,6 +1171,11 @@ follow-redirects@1.5.10:
   integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
   dependencies:
     debug "=3.1.0"
+
+follow-redirects@^1.10.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
+  integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
 
 forever-agent@~0.6.1:
   version "0.6.1"
