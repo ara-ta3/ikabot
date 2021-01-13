@@ -16,10 +16,10 @@
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-"@slack/bolt@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-2.6.1.tgz#529ac58c8bd135b78ac175e50a9768ddaf425250"
-  integrity sha512-sFTlYEzijoKaiBwmdfcLAO/466mzsV2cIYBEUyw5kUvP31169rCT8wiysxed+Qu/c0R5Q8HQDSRWv/n5jRrrug==
+"@slack/bolt@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@slack/bolt/-/bolt-2.7.0.tgz#12f1323f645405eceb5d5a68db632e3fc710fabe"
+  integrity sha512-bGCOlhp92wuG+wsQmy7qCtdaNjcuU/yy8dMsm4TWJ/ZHzZ7SqmStUVaou4n3LcJq0+Q/Xmg7gc117zYOCx/MiA==
   dependencies:
     "@slack/logger" "^2.0.0"
     "@slack/oauth" "^1.4.0"
