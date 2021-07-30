@@ -5,7 +5,7 @@ import { Bot } from './Bot';
 export async function init(
     botToken: string,
     signingSecret: string,
-    port: string,
+    port: number,
     splatoon: Splatoon
 ): Promise<unknown> {
     const app = new App({

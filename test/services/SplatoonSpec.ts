@@ -1,4 +1,4 @@
-import * as assert from 'power-assert';
+import assert from 'power-assert';
 import { Splatoon } from '../../src/services/Splatoon';
 import { MockSplat2ApiClient, MockStatInkApiClient } from '../mock';
 
