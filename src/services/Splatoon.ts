@@ -1,6 +1,6 @@
-import * as moment from 'moment';
-import * as request from 'request';
-import * as NodeCache from 'node-cache';
+import moment from 'moment';
+import request from 'request';
+import NodeCache from 'node-cache';
 
 import { format, formatCurrent } from '../lib/Formatter';
 import { Spla2APIClient, Spla2APIClientImpl, JsonResponseBody } from '../lib/Spla2APIClient';
