@@ -13,8 +13,9 @@ function main(): void {
 
     const slackBotToken = process.env.SLACK_BOT_TOKEN;
     const slackSigningSecret = process.env.SLACK_SIGNING_SECRET;
+    const slackAppToken = process.env.SLACK_APP_TOKEN;
     const port = parseInt(process.env.PORT) || 8080;
-    slackInit(slackBotToken, slackSigningSecret, port, splatoon).catch((e) => {
+    slackInit(slackBotToken, slackSigningSecret, slackAppToken, port, splatoon).catch((e) => {
         console.error(`Slack Error`);
         console.error(e);
     });
