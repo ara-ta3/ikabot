@@ -1,9 +1,11 @@
-import { Client, Message } from 'discord.js';
+import { Client, Intents, Message } from 'discord.js';
 import { Splatoon } from '../services/Splatoon';
 import { Bot } from './Bot';
 
 export async function init(token: string, splatoon: Splatoon): Promise<string> {
-    const client = new Client();
+    const client = new Client({
+        intents: [Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES],
+    });
 
     client.on('ready', () => {
         const botName = client.user.tag;
