@@ -1,6 +1,6 @@
 import { App, directMention } from '@slack/bolt';
-import { Splatoon } from '../services/Splatoon';
-import { Bot } from './Bot';
+import { Splatoon } from '../services/Splatoon.js';
+import { Bot } from './Bot.js';
 
 export async function init(
     botToken: string,

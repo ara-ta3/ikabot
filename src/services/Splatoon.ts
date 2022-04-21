@@ -2,10 +2,10 @@ import moment from 'moment';
 import request from 'request';
 import NodeCache from 'node-cache';
 
-import { format, formatCurrent } from '../lib/Formatter';
-import { Spla2APIClient, Spla2APIClientImpl, JsonResponseBody } from '../lib/Spla2APIClient';
-import { StatInkAPIClientImpl, StatInkAPIClient } from '../lib/StatInk';
-import { Weapon, Category, Type } from '../domains/Weapon';
+import { format, formatCurrent } from '../lib/Formatter.js';
+import { Spla2APIClient, Spla2APIClientImpl, JsonResponseBody } from '../lib/Spla2APIClient.js';
+import { StatInkAPIClientImpl, StatInkAPIClient } from '../lib/StatInk.js';
+import { Weapon, Category, Type } from '../domains/Weapon.js';
 
 export function instance(userAgent: string): Splatoon {
     return new Splatoon(

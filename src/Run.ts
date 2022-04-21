@@ -1,6 +1,6 @@
-import { init as discordInit } from './applications/Discord';
-import { init as slackInit } from './applications/Slack';
-import { instance as SplatoonServiceInstance } from './services/Splatoon';
+import { init as discordInit } from './applications/Discord.js';
+import { init as slackInit } from './applications/Slack.js';
+import { instance as SplatoonServiceInstance } from './services/Splatoon.js';
 
 function main(): void {
     const discordToken: string = process.env.DISCORD_TOKEN;

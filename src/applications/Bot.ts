@@ -1,7 +1,7 @@
-import { Splatoon } from '../services/Splatoon';
-import moment = require('moment');
-import { Pseudo } from '../domains/Pseudo';
-import { JapaneseToEnglish, Category, Type } from '../domains/Weapon';
+import { Splatoon } from '../services/Splatoon.js';
+import moment from 'moment';
+import { Pseudo } from '../domains/Pseudo.js';
+import { JapaneseToEnglish, Category, Type } from '../domains/Weapon.js';
 
 export class Bot {
     private name: string;

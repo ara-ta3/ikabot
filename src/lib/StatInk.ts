@@ -1,5 +1,5 @@
 import * as request from 'request';
-import { Weapon, Type, Category } from '../domains/Weapon';
+import { Weapon, Type, Category } from '../domains/Weapon.js';
 type RequestAPI = request.RequestAPI<request.Request, request.CoreOptions, request.RequiredUriUrl>;
 
 const APIEndpoint = 'https://stat.ink/api/v2';
