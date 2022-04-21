@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "ES2020",
+        "moduleResolution": "node12",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "noImplicitAny": true,
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": false,
-        "lib": ["es2015", "DOM"]
+        "lib": ["es2015", "DOM"],
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts"]
