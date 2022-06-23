@@ -54,17 +54,17 @@ const H3NozzlenosePseudo: Array<Pseudo> = [
 const L3NozzlenosePseudo: Array<Pseudo> = [
     {
         weaponName: 'L3リールガン',
-        gearPoint: 1.3,
+        gearPoint: 1.5,
         damage: 33.3,
     },
     {
         weaponName: 'L3リールガン',
-        gearPoint: 0.6,
+        gearPoint: 0.8,
         damage: 33.3,
     },
     {
         weaponName: 'L3リールガン',
-        gearPoint: 2.0,
+        gearPoint: 2.2,
         damage: 33.3,
     },
 ];
@@ -140,22 +140,12 @@ const TetraDualiesPseudo: Array<Pseudo> = [
 const BamboozlerPseudo: Array<Pseudo> = [
     {
         weaponName: '竹',
-        gearPoint: 2.6,
-        damage: 99.6,
-    },
-    {
-        weaponName: '竹',
-        gearPoint: 3.3,
-        damage: 99.8,
-    },
-    {
-        weaponName: '竹',
-        gearPoint: 2.7,
+        gearPoint: 2.8,
         damage: 99.9,
     },
     {
         weaponName: '竹',
-        gearPoint: 3.4,
+        gearPoint: 3.5,
         damage: 99.9,
     },
 ];
