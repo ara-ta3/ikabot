@@ -14,6 +14,16 @@ export async function init(
         socketMode: true,
         appToken: appToken,
         signingSecret: signingSecret,
+        customRoutes: [
+            {
+                path: '/health-check',
+                method: ['GET'],
+                handler: (_, res) => {
+                    res.writeHead(200);
+                    res.end('Ok');
+                },
+            },
+        ],
     });
 
     app.error(async (e) => {

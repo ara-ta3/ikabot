@@ -19,7 +19,7 @@ outdated:
 	$(YARN) outdated
 
 tsc:
-	$(YARN) run tsc
+	$(YARN) run compile
 
 clean:
 	rm -f src/**/*.js
