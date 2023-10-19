@@ -25,7 +25,7 @@
         "@slack/bolt": "3.14.0",
         "@types/node": "20.8.6",
         "@types/node-cache": "^4.2.5",
-        "@types/request": "^2.48.10",
+        "@types/request": "^2.48.11",
         "@types/ws": "^8.5.7",
         "discord.js": "13.6.0",
         "moment": "2.29.4",
