@@ -26,7 +26,7 @@
         "@types/node": "20.9.0",
         "@types/node-cache": "^4.2.5",
         "@types/request": "^2.48.12",
-        "@types/ws": "^8.5.8",
+        "@types/ws": "^8.5.9",
         "discord.js": "13.6.0",
         "moment": "2.29.4",
         "node-cache": "5.1.2",
