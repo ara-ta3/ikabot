@@ -23,7 +23,7 @@
     "homepage": "https://github.com/ara-ta3/ikabot#readme",
     "dependencies": {
         "@slack/bolt": "3.18.0",
-        "@types/node": "20.12.7",
+        "@types/node": "20.12.8",
         "@types/node-cache": "^4.2.5",
         "@types/request": "^2.48.12",
         "@types/ws": "^8.5.10",
