@@ -1,13 +1,15 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "15:00"
-    timezone: Asia/Tokyo
-  open-pull-requests-limit: 10
-  assignees:
-    - "ara-ta3"
-  labels:
-    - "automerge"
+    - package-ecosystem: npm
+      directory: '/'
+      schedule:
+          interval: daily
+          time: '15:00'
+          timezone: Asia/Tokyo
+      open-pull-requests-limit: 10
+      assignees:
+          - 'ara-ta3'
+      groups:
+          dependencies:
+              patterns:
+                  - '*'
