@@ -6,22 +6,21 @@
   "packageRules": [
     {
       "matchUpdateTypes": [
+        "major",
         "minor",
         "patch",
         "pin",
         "digest"
       ],
-      "groupName": "all non-major package updates"
+      "groupName": "all package updates"
     },
     {
       "matchPackageNames": [
-        "@typescript-eslint/*",
-        "eslint*",
-        "jest",
-        "ts-jest",
-        "@types/jest",
-        "ts-node",
-        "@types/node"
+        "@types/mocha",
+        "@types/power-assert",
+        "espower-typescript",
+        "mocha",
+        "power-assert"
       ],
       "groupName": "test libraries"
     },
@@ -34,6 +33,21 @@
     {
       "matchDatasources": ["github-actions"],
       "groupName": "github actions"
+    },
+    {
+      "matchPackageNames": [
+        "@slack/bolt",
+        "@types/node",
+        "@types/node-cache",
+        "@types/request",
+        "@types/ws",
+        "discord.js",
+        "moment",
+        "node-cache",
+        "request",
+        "typescript"
+      ],
+      "groupName": "all other npm packages"
     }
   ]
 }
