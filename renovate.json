@@ -5,18 +5,8 @@
   "automerge": true,
   "packageRules": [
     {
-      "matchPackageNames": [
-        "@slack/bolt",
-        "@types/node",
-        "@types/node-cache",
-        "@types/request",
-        "@types/ws",
-        "discord.js",
-        "moment",
-        "node-cache",
-        "request",
-        "typescript"
-      ],
+      "matchPackageNames": ["*"],
+      "matchManagers": ["npm"],
       "groupName": "npm packages"
     },
     {
