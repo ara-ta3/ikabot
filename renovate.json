@@ -1,0 +1,36 @@
+{
+  "extends": ["config:best-practices"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "groupName": "all non-major package updates"
+    },
+    {
+      "matchPackageNames": [
+        "@typescript-eslint/*",
+        "eslint*",
+        "jest",
+        "ts-jest",
+        "@types/jest",
+        "ts-node",
+        "@types/node"
+      ],
+      "groupName": "test libraries"
+    },
+    {
+      "matchPackageNames": [
+        "prettier"
+      ],
+      "groupName": "prettier"
+    },
+    {
+      "matchDatasources": ["github-actions"],
+      "groupName": "github actions"
+    }
+  ]
+}
