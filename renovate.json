@@ -5,14 +5,19 @@
   "automerge": true,
   "packageRules": [
     {
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch",
-        "pin",
-        "digest"
+      "matchPackageNames": [
+        "@slack/bolt",
+        "@types/node",
+        "@types/node-cache",
+        "@types/request",
+        "@types/ws",
+        "discord.js",
+        "moment",
+        "node-cache",
+        "request",
+        "typescript"
       ],
-      "groupName": "all package updates"
+      "groupName": "npm packages"
     },
     {
       "matchPackageNames": [
@@ -33,21 +38,6 @@
     {
       "matchDatasources": ["github-actions"],
       "groupName": "github actions"
-    },
-    {
-      "matchPackageNames": [
-        "@slack/bolt",
-        "@types/node",
-        "@types/node-cache",
-        "@types/request",
-        "@types/ws",
-        "discord.js",
-        "moment",
-        "node-cache",
-        "request",
-        "typescript"
-      ],
-      "groupName": "all other npm packages"
     }
   ]
 }
