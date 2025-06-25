@@ -39,6 +39,6 @@
         "espower-typescript": "10.0.1",
         "mocha": "11.7.1",
         "power-assert": "1.6.1",
-        "prettier": "3.6.0"
+        "prettier": "3.6.1"
     }
 }
